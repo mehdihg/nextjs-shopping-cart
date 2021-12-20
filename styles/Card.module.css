@@ -1,0 +1,43 @@
+.CardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.Card{
+    width: 250px;
+    padding: 40px;
+    margin: 10px;
+    background-color: white;
+}
+.Card img{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.Card h3{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Card h4{
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+.Card button{
+    text-align: center;
+    margin: 10px 0 0 0;
+    
+    color: #0073ff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width:540px){
+    .Card{
+        width: 100%;
+
+    }
+}
