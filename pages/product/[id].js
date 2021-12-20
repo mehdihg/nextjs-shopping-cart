@@ -4,9 +4,9 @@ import Meta from "../../components/Meta";
 import { isInCart } from "../../helpers/helpers";
 import styles from '../../styles/Product.module.css'
 import { CartStoreContext } from "../../utils/CartStoreProvider";
-
-const product = ({data}) => {
 const {state,dispatch}=useContext(CartStoreContext)
+const product = ({data}) => {
+
 
     return (
  
