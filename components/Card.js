@@ -9,12 +9,7 @@ import CardButtons from "./CardButtons";
 const Card = ({ data }) => {
   const {state,dispatch}=useContext(CartStoreContext)
 
-  const addToCartButton=(product)=>{
-   dispatch({type:'ADD_TO_CART',payload:product})
 
-
-
-  }
 
   return (
     <div className={styles.CardContainer}>
@@ -37,7 +32,7 @@ const Card = ({ data }) => {
 
               {
                 
-                isInCart(state,product.id)?<div className="CardButtons"><CardButtons className={styles.CardButtons} dispatch={dispatch} state={state} counter={isInCart(state,product.id)}/></div>:<button onClick={()=>addToCartButton(product)}>Add To Cart</button>
+                isInCart(state,product.id)?<div className="CardButtons"><CardButtons className={styles.CardButtons} dispatch={dispatch} state={state} counter={isInCart(state,product.id)}/></div>:<button onClick={()=>dispatch({type:'ADD_TO_CART',payload:product})}>Add To Cart</button>
                 
               }
              

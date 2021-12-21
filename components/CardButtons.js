@@ -5,8 +5,8 @@ import { FiTrash2 } from 'react-icons/fi';
 import { AiOutlineMinus , AiOutlinePlus } from 'react-icons/ai';
 import styles from '../styles/CardButtons.module.css'
 const CardButtons = ({state,counter,dispatch}) => {
-    
 
+ 
     return (
         <>
             {
