@@ -26,7 +26,7 @@ const Card = ({ data }) => {
               <Link href={`/product/${product.id}`} passHref >
                 <img src={product.image} />
               </Link>
-              <Link href={`/product/${product.id}`} passHref>
+              <Link href={`/Product/${product.id}`} passHref>
                 <h3>
                   {product.title.length > 20
                     ? product.title.substring(0, 20)
