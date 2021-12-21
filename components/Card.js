@@ -23,7 +23,7 @@ const Card = ({ data }) => {
           
           return (
             <div className={styles.Card} key={product.id}>
-              <Link href={`/product/${product.id}`} passHref >
+              <Link href={`/Product/${product.id}`} passHref >
                 <img src={product.image} />
               </Link>
               <Link href={`/Product/${product.id}`} passHref>
