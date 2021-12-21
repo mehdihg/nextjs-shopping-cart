@@ -4,9 +4,9 @@ import Meta from "../../components/Meta";
 import { isInCart } from "../../helpers/helpers";
 import styles from '../../styles/Product.module.css'
 import { CartStoreContext } from "../../utils/CartStoreProvider";
-const {state,dispatch}=useContext(CartStoreContext)
-const product = ({data}) => {
 
+const Product = ({data}) => {
+    const {state,dispatch}=useContext(CartStoreContext)
 
     return (
  
@@ -35,7 +35,7 @@ const product = ({data}) => {
     );
 }
 
-export default product;
+export default Product;
 
 export const getStaticPaths=async()=>{
 
