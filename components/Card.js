@@ -19,14 +19,18 @@ const Card = ({ data }) => {
           return (
             <div className={styles.Card} key={product.id}>
               <Link href={'/Product/[id]'} as = {`/Product/${product.id}`}>
+                <a>
                 <img src={product.image} />
+                </a>
               </Link>
               <Link href={'/Product/[id]'} as = {`/Product/${product.id}`}>
+                <a>
                 <h3>
                   {product.title.length > 20
                     ? product.title.substring(0, 20)
                     : product.title}
                 </h3>
+                </a>
               </Link>
               <h4>{product.price} $</h4>
 
