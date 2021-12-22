@@ -18,12 +18,12 @@ const Card = ({ data }) => {
 
           return (
             <div className={styles.Card} key={product.id}>
-              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`}>
+              <Link href={`/[id]`} as = {`/${product.id}`}>
                 <a>
                 <img src={product.image} />
                 </a>
               </Link>
-              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`}>
+              <Link href={`/[id]`} as = {`/${product.id}`}>
                 <a>
                 <h3>
                   {product.title.length > 20

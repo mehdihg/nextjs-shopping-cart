@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import useSWR from "swr";
-import CardButtons from "../../components/CardButtons";
-import Meta from "../../components/Meta";
-import { isInCart } from "../../helpers/helpers";
-import styles from '../../styles/Product.module.css'
-import { CartStoreContext } from "../../utils/CartStoreProvider";
+import CardButtons from "../components/CardButtons";
+import Meta from "../components/Meta";
+import { isInCart } from "../helpers/helpers";
+import styles from '../styles/Product.module.css'
+import { CartStoreContext } from "../utils/CartStoreProvider";
 
 const Product = ({data}) => {
     const {state,dispatch}=useContext(CartStoreContext)
