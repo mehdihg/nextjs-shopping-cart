@@ -7,15 +7,9 @@ import { isInCart } from "../../helpers/helpers";
 import styles from '../../styles/Product.module.css'
 import { CartStoreContext } from "../../utils/CartStoreProvider";
 
-const Product = () => {
+const Product = ({data}) => {
     const {state,dispatch}=useContext(CartStoreContext)
-    const router=useRouter()
-    const {id}=router.query
-    const fetcher=(url)=>fetch(url).then((res)=>res.json());
-    const { data, error } = useSWR(`https://fakestoreapi.com/products/${id}`, fetcher)
 
-    if (error) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
     return (
  
         <div className={styles.productContainer}>
@@ -45,7 +39,7 @@ const Product = () => {
 
 export default Product;
 
-/*export const getStaticPaths=async()=>{
+export const getStaticPaths=async()=>{
 
     const res=await fetch('https://fakestoreapi.com/products')
     const data=await res.json()
@@ -75,4 +69,4 @@ export const getStaticProps=async({params})=>{
             data:data
         }
     }
-}*/
+}

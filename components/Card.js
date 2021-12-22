@@ -15,13 +15,13 @@ const Card = ({ data }) => {
     <div className={styles.CardContainer}>
       {data &&
         data.map((product) => {
-          
+
           return (
             <div className={styles.Card} key={product.id}>
-              <Link href={`/Product/${product.id}`} passHref >
+              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`} passHref >
                 <img src={product.image} />
               </Link>
-              <Link href={`/Product/${product.id}`} passHref>
+              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`} passHref>
                 <h3>
                   {product.title.length > 20
                     ? product.title.substring(0, 20)
