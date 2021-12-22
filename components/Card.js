@@ -18,10 +18,10 @@ const Card = ({ data }) => {
 
           return (
             <div className={styles.Card} key={product.id}>
-              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`} passHref >
+              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`}>
                 <img src={product.image} />
               </Link>
-              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`} passHref>
+              <Link href={'/Product/[id]'} as = {`/Product/${product.id}`}>
                 <h3>
                   {product.title.length > 20
                     ? product.title.substring(0, 20)
