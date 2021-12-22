@@ -1,9 +1,7 @@
 import Cart from "../../components/Cart";
 
 const index = () => {
-    return (
-        <Cart />
-    );
-}
+  return <Cart />;
+};
 
 export default index;
